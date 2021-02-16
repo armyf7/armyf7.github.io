@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <!-- Metadati -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Armando Fiorillo">
+  <meta name="description" content="Gioco del pong">
+  <title>Gioco del pong</title>
+  <meta property="og:title" content="Gioco del pong">
+  <meta property="og:description" content="Gioco del pong">
+  <meta name="twitter:creator" content="Armando Fiorillo">
+  <meta property="twitter:description" content="Gioco del pong">
+  <meta property="twitter:title" content="Gioco del pong">
+  <!--Metadati di p5.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+</head>
+
+<body>
+  <h1>Gioco del pong</h1>
+  <p>Il giocatore controlla con il mouse una racchetta sotto forma di rettangolo e deve colpire una pallina, sotto
+  forma di un cerchio, che rimbalza sui 4 bordi dello schermo, ogni volta che viene colpita, si ottiene un punto.</p>
+  <h1>Descrizione Problemi </h1>
+  <p>Il Cliente richiede di realizzare il gioco del pong. </p>
+  <h1>Requisiti: </h1>
+  <p>La pallina è realizzata attraverso un cerchio "rosso" con le coordinate iniziali "x=50,y=50" e il diametro "50".</p>
+  <p>L'area da disegno è "rettangolo" "x=600,y=400".</p>
+  <p>L’area da disegno ha 4 bordi realizzati da linee.</p>
+  <p>La velocita della pallina è "x=5,y=5". </p>
+  <p>La pallina arrivata alla coordinata y=400 inverte la velocità sull'asse Y=-5. </p>
+  <p>La pallina arrivata alla coordinata x=400 inverte la velocità sull'asse X=-5.</p>
+  <p>La pallina arrivata alla coordinata y=0 inverte la velocità sull'asse Y=+5. </p>
+  <p>La pallina arrivata alla coordinata x=0 inverte la velocità sull'asse X=+5. </p>
+  <p>La racchetta è realizzata con un "rettangolo" di colore "verde" Le cordinate iniziali "x=5 y=30" "H=20 L=80". </p>
+  <p>Quando x e y sono compresi tra x della racchetta e y della racchetta inverte la velocita sull'asse delle "x." </p>
+  <p>La racchetta si deve muovere solo nell'asse "Y". </p>
+  <p>La racchetta è comandata tramite mouse. </p>
+  <p>Il punteggio indica ogni qualvolta la pallina tocca la racchetta.</p>
+  <h1>Questionario Cliente</h1>
+  <p>Come deve "reagire" l'applicazione (il gioco) quando l'utente ruota lo schermo dello smartphone?</p>
+  <p>La modalità di gioco a tutto schermo (full-screen) è da realizzare?</p>
+  <p>La racchetta cambia mai colore nel corso del gioco?</p>
+  <p>La pallina cambia mai colore nel corso del gioco?</p>
+  <p>Quando la racchetta colpisce la pallina, emette un suono?</p>
+  <p>Di che colore deve essere l'area da disegno?</p>
+  <p>Di che colore deve essere la scritta del punteggio?</p>
+  <p>Il gioco si può mettere in pausa?</p>
+  <p>E' possibile implementare un game over?</p>
+  <script>
+    let x = 50;
+    let y = 50;
+    let diameter = 50;
+    let velocitax = 5;
+    let velocitay = 5;
+    let i = 0;
+    let rectY = 0;
+
+    function setup() {
+      createCanvas(600, 400);
+    }
+
+    function draw() {
+      background(140, 203, 250);
+      line(1, 399, 599, 399);
+      line(599, 1, 599, 599);
+      line(1, 1, 599, 1);
+      line(1, 1, 1, 599);
+      fill(255, 0, 0);
+      circle(x, y, diameter);
+
+      if (x + velocitax > width - 50 || x + velocitay < 50) {
+        velocitax = -velocitax;
+      }
+
+      if (y + velocitay > height - 50 || y + velocitay < 50) {
+        velocitay = -velocitay;
+      }
+
+      fill(0, 0, 0);
+      textSize(20);
+      text("Punteggio:" + i, 440, 5, 30);
+      rectY = mouseY;
+
+      if (rectY <= 0) {
+        rectY = 1;
+      }
+
+      if (rectY >= height - 80) {
+        rectY = height - 80;
+      }
+
+      fill(0, 255, 0);
+      rect(5, rectY, 20, 80);
+
+      if ((y >= mouseY && y <= mouseY + 80 && x <= 50)) {
+        velocitax = 5;
+        i++;
+      }
+      x = x + velocitax;
+      y = y + velocitay;
+    }
+  </script>
+</body>
+
+</html>
