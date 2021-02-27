@@ -6,221 +6,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Armando Fiorillo">
-  <meta name="description" content="Pagina web sul videogioco del pong">
-  <title>Videogioco del pong</title>
-  <meta property="og:title" content="Videogioco del pong">
-  <meta property="og:description" content="Pagina web sul videgioco del pong">
-  <!-- Twitter card -->
+  <meta name="description" content="Home Page del progetto github">
+  <title>Home Page</title>
+  <!-- Metadati Open Graph -->
+  <meta property="og:title" content="Home Page">
+  <meta property="og:description" content="Home Page del progetto github">
+  <!-- Metadati Twitter Card -->
   <meta name="twitter:creator" content="Armando Fiorillo">
-  <meta property="twitter:description" content="Pagina web sul videogioco del pong">
-  <meta property="twitter:title" content="Videogioco del pong">
-  <!--Metadati di p5.js-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
-  <style>
-    html, body { margin: 0; padding: 0; }
-    canvas { display: block; }
-  </style>
+  <meta property="twitter:description" content="Home Page del progetto github">
+  <meta property="twitter:title" content="Home Page">
 </head>
 
 <body>
-  <h1>Videogioco del pong</h1>
-  <h2>Descrizione del gioco:</h2>
-  <p>Il pong è un gioco 2D che simula in modo molto semplificato il tennistavolo. Il giocatore controlla con il mouse una racchetta e colpisce una pallina che rimbalza sui bordi dello schermo, ogni
-    volta che viene colpita, si ottiene un punto. Il punteggio viene visualizzato su un contatore.</p>
-  <h2>Requisiti del cliente:</h2>
-  <p>La pallina è realizzata attraverso un cerchio "rosso" con le coordinate iniziali "x=50,y=50" e il diametro "50".</p>
-  <p>L'area da disegno è "rettangolo" "x=600,y=400".</p>
-  <p>L’area da disegno ha 4 bordi realizzati da linee.</p>
-  <p>La velocità della pallina è "x=5,y=5". </p>
-  <p>La pallina arrivata alla coordinata y=400 inverte la velocità sull'asse Y=-5. /p>
-  <p>La pallina arrivata alla coordinata x=400 inverte la velocità sull'asse X=-5.</p>
-  <p>La pallina arrivata alla coordinata y=0 inverte la velocità sull'asse Y=+5.</p>
-  <p>La pallina arrivata alla coordinata x=0 inverte la velocità sull'asse X=+5.</p>
-  <p>La racchetta è realizzata con un "rettangolo" di colore "verde" Le cordinate iniziali "x=5 y=30" "H=20 L=80".</p>
-  <p>Quando x e y sono compresi tra x della racchetta e y della racchetta inverte la velocita sull'asse delle "x."</p>
-  <p>La racchetta si deve muovere solo nell'asse "Y".</p>
-  <p>La racchetta è comandata tramite mouse.</p>
-  <p>Il punteggio indica ogni qualvolta la pallina tocca la racchetta.</p>
-  <p>Il punteggio indica ogni qualvolta la pallina tocca la racchetta.</p>
-  <h2>Questionario per il cliente</h2>
-  <p>Quando la prima pallina viene colpita dalla racchetta, quanti punti si ottengono?</p>
-  <p>Da quale coordinata parte la seconda pallina?</p>
-  <p>Di che colore deve essere la seconda pallina?</p>
-  <p>Che velocità deve assumere la seconda pallina?</p>
-  <p>Quando la seconda pallina viene colpita dalla racchetta, quanti punti si ottengono?</p>
-  <p>Da quale coordinata parte la terza pallina?</p>
-  <p>Di che colore deve essere la terza pallina?</p>
-  <p>Che velocità assume la terza pallina?</p>
-  <p>Quando la terza pallina viene colpita dalla racchetta, quanti punti si ottengono?</p>
-  <p>Da quale coordinata iniziale parte la terza pallina?</p>
-  <p>Come deve "reagire" l'applicazione (il gioco) quando l'utente ruota lo schermo dello smartphone?</p>
-  <p>La modalità di gioco a tutto schermo (full-screen) è da realizzare?</p>
-  <p>La racchetta cambia mai colore nel corso del gioco?</p>
-  <p>La pallina cambia mai colore nel corso del gioco?</p>
-  <p>Quando la racchetta colpisce la pallina, emette un suono?</p>
-  <p>Ci deve essere una musica di sottofondo?</p>
-  <p>Di che colore deve essere l'area da disegno?</p>
-  <p>Quanto deve essere grande la scritta del punteggio?</p>
-  <p>Di che colore deve essere la scritta del punteggio?</p>
-  <p>Di che colore devono essere i bordi che delimitano l'area da disegno?</p>
-  <p>Quando si arriva a un certo numero di punti, le palline aumentano la velocità?</p>
-  <p>Il gioco si può mettere in pausa?</p>
-  <p>E' da realizzare un game over?</p>
-  <script>
-    // Creo un nuovo tipo "Colore"
-    class Colore {
-
-      // Costruttore con parametri formali red, green, blue
-      constructor(red, green, blue) {
-
-        // this è un riferimento all'oggetto stesso
-        // this.rosso è una proprietà dell'oggetto
-        this.rosso = red;
-        this.verde = green;
-        this.blue = blue;
-      }
-    }
-
-    // Creo un nuovo tipo "Pallina"
-    class Pallina {
-
-      // Costruttore con parametri formali x, y, diametro, colore
-      constructor(x, y, diametro, colore) {
-
-        // this è un riferimento all'oggetto stesso
-        // this.x è una proprietà dell'oggetto
-        this.x = x;
-        this.y = y;
-        this.diametro = diametro;
-        this.raggio = diametro / 2;
-        this.colore = colore;
-      }
-    }
-
-    // L'operatore "new" crea un nuovo oggetto in memoria
-    let coloreRosso = new Colore(255, 0, 0);
-    let coloreVerde = new Colore(0, 255, 0);
-    let coloreBlu = new Colore(0, 0, 255);
-
-    let p1 = new Pallina(50, 50, 50, coloreRosso);
-    let p2 = new Pallina(120, 200, 80, coloreVerde);
-    let p3 = new Pallina(250, 100, 60, coloreBlu);
-    let velocitaxp1 = 5; // Velocità della prima pallina sull'asse x
-    let velocitayp1 = 5; // Velocità della prima pallina sull'asse y
-    let velocitaxp2 = 4; // Velocità della seconda pallina sull'asse x
-    let velocitayp2 = 4; // Velocità della seconda pallina sull'asse y
-    let velocitaxp3 = 6; // Velocità della terza pallina sull'asse x
-    let velocitayp3 = 6; // Velocità della terza pallina sull'asse y
-    let punti = 0; // Punteggio
-
-    function setup() {
-      createCanvas(600, 400); // Grandezza dell'area da disegno
-    }
-
-    function draw() {
-      background(140, 203, 250); // Colore dell'area da disegno
-
-      fill(0, 0, 0); // Colore del bordo
-      line(1, 399, 599, 399); // Bordo inferiore
-      line(599, 1, 599, 599); // Bordo destro
-      line(1, 1, 599, 1); // Bordo superiore
-      line(1, 1, 1, 599); // Bordo sinistro
-
-      // Prima pallina
-      fill(p1.colore.rosso, p1.colore.verde, p1.colore.blue);
-      circle(p1.x, p1.y, p1.diametro);
-
-      // Seconda pallina
-      fill(p2.colore.rosso, p2.colore.verde, p2.colore.blue);
-      circle(p2.x, p2.y, p2.diametro);
-
-      // Terza Pallina
-      fill(p3.colore.rosso, p3.colore.verde, p3.colore.blue);
-      circle(p3.x, p3.y, p3.diametro);
-
-      // Condizioni della prima pallina
-
-      // Impediamo che la pallina superi il bordo in alto e il bordo in basso, la velocità passa da positiva a negativa sull'asse x
-      if (p1.x + velocitaxp1 > width - 50 || p1.x + velocitayp1 < 50) {
-        velocitaxp1 = -velocitaxp1;
-      }
-
-      // Impediamo che la pallina superi il bordo in alto e il bordo in basso, la velocità passa da positiva a negativa sull'asse y
-      if (p1.y + velocitayp1 > height - 50 || p1.y + velocitayp1 < 50) {
-        velocitayp1 = -velocitayp1;
-      }
-
-      // Creiamo il rimbalzo della pallina, quando la racchetta la colpisce, si ottiene un punto
-      if ((p1.y >= mouseY && p1.y <= mouseY + 80 && p1.x <= 50)) {
-        velocitaxp1 = 5;
-        punti = punti + 1;
-      }
-
-      p1.x = p1.x + velocitaxp1;
-      p1.y = p1.y + velocitayp1;
-
-      // Condizioni della seconda pallina
-
-      // Impediamo che la pallina superi il bordo in alto e il bordo in basso, la velocità passa da positiva a negativa sull'asse x
-      if (p2.x + velocitaxp2 > width - 50 || p2.x + velocitayp2 < 50) {
-        velocitaxp2 = -velocitaxp2;
-      }
-
-      // Impediamo che la pallina superi il bordo in alto e il bordo in basso, la velocità passa da positiva a negativa sull'asse y
-      if (p2.y + velocitayp2 > height - 50 || p2.y + velocitayp2 < 50) {
-        velocitayp2 = -velocitayp2;
-      }
-
-      // Creiamo il rimbalzo della pallina, quando la racchetta la colpisce, si ottiene un punto
-      if ((p2.y >= mouseY && p2.y <= mouseY + 80 && p2.x <= 80)) {
-        velocitaxp2 = 5;
-        punti = punti + 1;
-      }
-
-      p2.x = p2.x + velocitaxp2;
-      p2.y = p2.y + velocitayp2;
-
-      // Condizioni della terza pallina
-
-      // Impediamo che la pallina superi il bordo in alto e il bordo in basso, la velocità passa da positiva a negativa sull'asse y
-      if (p3.x + velocitaxp3 > width - 60 || p3.x + velocitayp3 < 60) {
-        velocitaxp3 = -velocitaxp3;
-      }
-
-      // Impediamo che la pallina superi il bordo in alto e il bordo in basso, la velocità passa da positiva a negativa sull'asse y
-      if (p3.y + velocitayp3 > height - 60 || p3.y + velocitayp3 < 60) {
-        velocitayp3 = -velocitayp3;
-      }
-
-      // Creiamo il rimbalzo della pallina, quando la racchetta la colpisce, si ottiene un punto
-      if ((p3.y >= mouseY && p3.y <= mouseY + 80 && p3.x <= 60)) {
-        velocitaxp3 = 5;
-        punti = punti + 1;
-      }
-
-      p3.x = p3.x + velocitaxp3;
-      p3.y = p3.y + velocitayp3;
-
-      // Questa condizione impedisce alla racchetta di superare il bordo in alto
-      if (mouseY <= 0) {
-        mouseY = 1;
-      }
-
-      // Questa condizione impedisce alla racchetta di superare il bordo in ìbasso
-      if (mouseY >= height - 80) {
-        mouseY = height - 80;
-      }
-
-      // Creazione della racchetta
-      fill(p2.colore.rosso, p2.colore.verde, p2.colore.blue); // Colore della racchetta
-      rect(5, mouseY, 20, 80);
-
-      // Visualizza il testo del punteggio
-      fill(0, 0, 0);
-      textSize(20);
-      text("Punteggio:" + punti, 440, 5, 30);
-    }
-  </script>
+  <h1>Menù a scelta sugli esercizi</h1>
+  <p>Clicca sui collegamenti per visualizzare la pagina web desiderata.</p>
+  <ul>
+    <li><a href="FormazioneInter.html">Formazione Inter</a></li>
+    <li><a href="Orologio.html">Orologio</a></li>
+    <li><a href="Robot.html">Robot</a></li>
+  </ul>
 </body>
 
 </html>
