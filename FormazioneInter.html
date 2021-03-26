@@ -16,8 +16,10 @@
   <meta property="twitter:description" content="Pagina web sulla formazione dell'Inter">
   <meta property="twitter:title" content="Inter">
   <!-- Metadati Bootswatch -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.3/dist/darkly/bootstrap.css" integrity="sha256-jN1/3LSOsvNEnOHn1sEOHXKA8RsU+Q7Wk7PE3dLe8Os=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.3/dist/darkly/bootstrap.css"
+    integrity="sha256-jN1/3LSOsvNEnOHn1sEOHXKA8RsU+Q7Wk7PE3dLe8Os=" crossorigin="anonymous">
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand">Navbar</a>
@@ -48,7 +50,7 @@
       </form>
     </div>
   </nav>
-  
+
   <h1 align="center">Inter</h1> <!-- titolo -->
   <h2>Portieri</h2> <!-- sottotitolo -->
   <mark>
@@ -108,32 +110,34 @@
   <ins>Andrea Pinamonti</ins>
   <ins>Alexis Sánchez</ins>
   <ins>Martín Satriano</ins>
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js"
+    integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
+   <script>
+    (function () {
+      'use strict';
+
+      $(window).scroll(function () {
+        var top = $(document).scrollTop();
+        if (top > 50) {
+          $('#home > .navbar').removeClass('navbar-transparent');
+        } else {
+          $('#home > .navbar').addClass('navbar-transparent');
+        }
+      })
+
+      $('a[href="#"]').click(function (event) {
+        event.preventDefault();
+      })
+
+      // $('.alert').alert()
+      // $('.carousel').carousel();
+      $('.bs-component [data-toggle="popover"]').popover();
+      $('.bs-component [data-toggle="tooltip"]').tooltip();
+      $('.bs-component [data-toggle="popover"]').popover();
+      // $('.bs-component .modal-dialog').modal();
+    })();
+  </script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js" integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
-    <script>
-        (function () {
-            'use strict';
-
-            $(window).scroll(function () {
-                var top = $(document).scrollTop();
-                if (top > 50) {
-                    $('#home > .navbar').removeClass('navbar-transparent');
-                } else {
-                    $('#home > .navbar').addClass('navbar-transparent');
-                }
-            })
-
-            $('a[href="#"]').click(function (event) {
-                event.preventDefault();
-            })
-
-            // $('.alert').alert()
-            // $('.carousel').carousel();
-            $('.bs-component [data-toggle="popover"]').popover();
-            $('.bs-component [data-toggle="tooltip"]').tooltip();
-            $('.bs-component [data-toggle="popover"]').popover();
-            // $('.bs-component .modal-dialog').modal();
-        })();
-    </script>
 </html>
