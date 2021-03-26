@@ -15,58 +15,108 @@
     <meta name="twitter:creator" content="Armando Fiorillo">
     <meta property="twitter:description" content="Pagina web sulle mie soft skills">
     <meta property="twitter:title" content="Soft Skills">
+    <!-- Metadati Bootswatch -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/darkly/bootstrap.css" integrity="sha256-sI9r5OJ+Pe8S/XYC/eO2EUp8TJRGG1TMDaPkJPlyFNo=" crossorigin="anonymous">
 </head>
-
 <body>
-    <h1 align="center">Le mie soft skills</h1>
-    <h2 align="center">
-        <a href="https://armyf7.github.io/">➔Torna alla home🠔</a>
-    </h2>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Menù</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="FormazioneInter.html">Formazione squadra</a>
+                        <a class="dropdown-item" href="Orologio.html">Orologio</a>
+                        <a class="dropdown-item" href="Robot.html">Robot</a>
+                        <a class="dropdown-item" href="SoftSkills.html">Soft Skills</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Cerca">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+        </div>
+    </nav>
+    <h1 align="center">Soft Skills</h1>
     <ul>
         <li>
             <strong>Problem solving</strong>: Sono capace di analizzare un problema e di trovare una soluzione.
         </li>
         <li>
-            <strong>Team working</strong>: Riesco a lavorare e a collaborare con un gruppo di persone .
+            <strong>Team working</strong>: Riesco a lavorare e a collaborare con un gruppo di persone.
         </li>
         <li>
             <strong>Disponibilità</strong>: Sono una persona disponibile a qualsiasi orario per lavorare.
         </li>
         <li>
-            <strong>Leadership</strong>: Sono capace di saper guidare, motivare e trascinare i membri del team verso un
-            obiettivo.
+            <strong>Leadership</strong>: Sono capace di saper guidare, motivare e trascinare i membri del team verso un obiettivo.
         </li>
         <li>
             <strong>Autonomia</strong>: Sono capace di svolgere i compiti assegnati da solo.
         </li>
         <li>
-            <strong>Comunicazione</strong>: Interagisco facilmente con le altre persone e so trasmettere le informazioni
-            in modo chiaro.
+            <strong>Comunicazione</strong>: Interagisco facilmente con le altre persone e so trasmettere le informazioni in modo chiaro.
         </li>
         <li>
-            <strong>Lavorare sotto pressione</strong>: Riesco a consegnare le mansioni richieste entro o in anticipo
-            della data di scadenza della consegna e sono capace di controllare lo stress.
+            <strong>Lavorare sotto pressione</strong>: Riesco a consegnare le mansioni richieste entro o in anticipo della data di scadenza della consegna e sono capace di controllare lo stress.
         </li>
         <li>
-            <strong>Pianificare e organizzare</strong>: So identificare obiettivi e priorità, tener conto del tempo a
-            disposizione e organizzare il lavoro delle eventuali risorse a disposizione.
+            <strong>Pianificare e organizzare</strong>: So identificare obiettivi e priorità, tener conto del tempo a disposizione e organizzare il lavoro delle eventuali risorse a disposizione.
         </li>
         <li>
-            <strong>Apprendere in maniera continuativa</strong>: Riesco ad apprendere facilmente nuovi argomenti e
-            risolvere delle lacune grazie a degli esempi e spiegazioni.
+            <strong>Apprendere in maniera continuativa</strong>: Riesco ad apprendere facilmente nuovi argomenti e risolvere delle lacune grazie a degli esempi e spiegazioni.
         </li>
         <li>
-            <strong>Gestire le informazioni</strong>: Riesco ad acquisire, organizzare e riformulare efficacemente dati
-            e conoscenze provenienti da fonti diverse, verso un obiettivo definito.
+            <strong>Gestire le informazioni</strong>: Riesco ad acquisire, organizzare e riformulare efficacemente dati e conoscenze provenienti da fonti diverse, verso un obiettivo definito.
         </li>
         <li>
-            <strong>Fiducia in me stesso</strong>: Sono consapevole delle mie capacità e delle mie idee al di là delle
-            opinioni degli altri.
+            <strong>Fiducia in me stesso</strong>: Sono consapevole delle mie capacità e delle mie idee al di là delle opinioni degli altri.
         </li>
         <li>
-            <strong>Intraprendenza</strong>: Sono capace di sviluppare idee e di saperle organizzare in un progetto fino
-            a realizzarlo.
+            <strong>Intraprendenza</strong>: Sono capace di sviluppare idee e di saperle organizzare in un progetto fino a realizzarlo.
         </li>
     </ul>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js"
+    integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
+<script>
+    (function () {
+        'use strict';
+
+        $(window).scroll(function () {
+            var top = $(document).scrollTop();
+            if (top > 50) {
+                $('#home > .navbar').removeClass('navbar-transparent');
+            } else {
+                $('#home > .navbar').addClass('navbar-transparent');
+            }
+        })
+
+        $('a[href="#"]').click(function (event) {
+            event.preventDefault();
+        })
+
+        // $('.alert').alert()
+        // $('.carousel').carousel();
+        $('.bs-component [data-toggle="popover"]').popover();
+        $('.bs-component [data-toggle="tooltip"]').tooltip();
+        $('.bs-component [data-toggle="popover"]').popover();
+        // $('.bs-component .modal-dialog').modal();
+    })();
+</script>
+
 </html>

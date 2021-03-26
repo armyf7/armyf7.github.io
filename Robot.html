@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Armando Fiorillo">
     <meta name="description" content="Disegno di un robot comandato tramite mouse">
-    <title>Robot.js</title>
+    <title>Robot</title>
     <!-- Metadati Open Graph -->
     <meta property="og:title" content="Robot.js">
     <meta property="og:description" content="Disegno di un robot comandato tramite mouse">
@@ -17,12 +17,41 @@
     <meta property="twitter:title" content="Robot.js">
     <!--Metadati di p5.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <!-- Metadati Bootswatch -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/darkly/bootstrap.css" integrity="sha256-sI9r5OJ+Pe8S/XYC/eO2EUp8TJRGG1TMDaPkJPlyFNo=" crossorigin="anonymous">
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Menù</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="FormazioneInter.html">Formazione squadra</a>
+                        <a class="dropdown-item" href="Orologio.html">Orologio</a>
+                        <a class="dropdown-item" href="Robot.html">Robot</a>
+                        <a class="dropdown-item" href="SoftSkills.html">Soft Skills</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Cerca">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+        </div>
+    </nav>
     <h1 align="center">Robot</h1>
-    <h2 align="center">
-        <a href="https://armyf7.github.io/">➔Torna alla home🠔</a>
-    </h2>
     <script>
         function setup() {
             createCanvas(800, 800);
@@ -69,5 +98,35 @@
             circle(mouseX + 205, mouseY + 345, 35); //mano destra
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js"
+        integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            'use strict';
+
+            $(window).scroll(function () {
+                var top = $(document).scrollTop();
+                if (top > 50) {
+                    $('#home > .navbar').removeClass('navbar-transparent');
+                } else {
+                    $('#home > .navbar').addClass('navbar-transparent');
+                }
+            })
+
+            $('a[href="#"]').click(function (event) {
+                event.preventDefault();
+            })
+
+            // $('.alert').alert()
+            // $('.carousel').carousel();
+            $('.bs-component [data-toggle="popover"]').popover();
+            $('.bs-component [data-toggle="tooltip"]').tooltip();
+            $('.bs-component [data-toggle="popover"]').popover();
+            // $('.bs-component .modal-dialog').modal();
+        })();
+    </script>
 </body>
+
 </html>
