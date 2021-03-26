@@ -110,30 +110,30 @@
   <ins>Martín Satriano</ins>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js" integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
-<script>
-  (function () {
-    'use strict';
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js" integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            'use strict';
 
-    $(window).scroll(function () {
-      var top = $(document).scrollTop();
-      if (top > 50) {
-        $('#home > .navbar').removeClass('navbar-transparent');
-      } else {
-        $('#home > .navbar').addClass('navbar-transparent');
-      }
-    })
+            $(window).scroll(function () {
+                var top = $(document).scrollTop();
+                if (top > 50) {
+                    $('#home > .navbar').removeClass('navbar-transparent');
+                } else {
+                    $('#home > .navbar').addClass('navbar-transparent');
+                }
+            })
 
-    $('a[href="#"]').click(function (event) {
-      event.preventDefault();
-    })
+            $('a[href="#"]').click(function (event) {
+                event.preventDefault();
+            })
 
-    // $('.alert').alert()
-    // $('.carousel').carousel();
-    $('.bs-component [data-toggle="popover"]').popover();
-    $('.bs-component [data-toggle="tooltip"]').tooltip();
-    $('.bs-component [data-toggle="popover"]').popover();
-    // $('.bs-component .modal-dialog').modal();
-  })();
-</script>
+            // $('.alert').alert()
+            // $('.carousel').carousel();
+            $('.bs-component [data-toggle="popover"]').popover();
+            $('.bs-component [data-toggle="tooltip"]').tooltip();
+            $('.bs-component [data-toggle="popover"]').popover();
+            // $('.bs-component .modal-dialog').modal();
+        })();
+    </script>
 </html>
