@@ -16,16 +16,27 @@
   <meta property="twitter:description" content="Pagina web sulla formazione dell'Inter">
   <meta property="twitter:title" content="Inter">
   <!-- Metadati Bootswatch -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.3/dist/darkly/bootstrap.css"
-    integrity="sha256-jN1/3LSOsvNEnOHn1sEOHXKA8RsU+Q7Wk7PE3dLe8Os=" crossorigin="anonymous">
-    <style>
-      h1 {
-        text-align: center;
-      }
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/darkly/bootstrap.css"
+    integrity="sha256-sI9r5OJ+Pe8S/XYC/eO2EUp8TJRGG1TMDaPkJPlyFNo=" crossorigin="anonymous">
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      font-size: 18pt;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      color: #5eff00;
+    }
   </style>
 </head>
 
 <body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
@@ -38,24 +49,38 @@
           <a class="nav-link" href="index.html">Home
             <span class="sr-only">(current)</span>
           </a>
-        <li class="nav-item dropdown">
+          </a>
+        </li>
+        <li class="nav-item active">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
             aria-expanded="false">Menù</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="FormazioneInter.html">Formazione squadra</a>
-            <a class="dropdown-item" href="Orologio.html">Orologio</a>
-            <a class="dropdown-item" href="Robot.html">Robot</a>
-            <a class="dropdown-item" href="SoftSkills.html">Soft Skills</a>
+            <p>Sistemi E Reti</p>
+            <ul>
+              <li><a class="dropdown-item" href="FormazioneInter.html">Squadra di calcio</a></li>
+              <li><a class="dropdown-item" href="Orologio.html">Orologio</a></li>
+              <li><a class="dropdown-item" href="Robot.html">Robot</a></li>
+              <li><a class="dropdown-item" href="SoftSkills.html">Soft Skills</a></li>
+            </ul>
+            <p>Italiano</p>
+            <ul>
+              <li><a class="dropdown-item" href="index.html">Obiettivi agenda 2030</a></li>
+            </ul>
+            <p>Inglese</p>
+            <ul>
+              <li><a class="dropdown-item" href="index.html">The Imitation Game</a></li>
+            </ul>
+            <p>Matematica</p>
+            <ul>
+              <li><a class="dropdown-item" href="index.html">Statistica</a></li>
+            </ul>
           </div>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Cerca">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Cerca</button>
-      </form>
-    </div>
+      </div>
   </nav>
-
+  <div class="navbar-expand-lg navbar-dark bg-primary container p-0 mt-3 mb-3 shadow rounded text-center">
+  <div>
   <h1>Inter</h1> <!-- titolo -->
   <h2>Portieri</h2> <!-- sottotitolo -->
   <mark>
@@ -115,11 +140,15 @@
   <ins>Andrea Pinamonti</ins>
   <ins>Alexis Sánchez</ins>
   <ins>Martín Satriano</ins>
-   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js"
+  <p>
+    <img src="https://www.inter.it/binaries/content/gallery/internazionale/photos/2021/04/21/2021-04-21-18-54-04_360147.jpg/2021-04-21-18-54-04_360147.jpg/internazionale%253Acinema" alt="...">
+</p>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js"
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js"
     integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
-   <script>
+  <script>
     (function () {
       'use strict';
 
@@ -145,4 +174,5 @@
     })();
   </script>
 </body>
+
 </html>

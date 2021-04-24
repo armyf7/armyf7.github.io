@@ -16,16 +16,27 @@
     <meta property="twitter:description" content="Pagina web sulle mie soft skills">
     <meta property="twitter:title" content="Soft Skills">
     <!-- Metadati Bootswatch -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.3/dist/darkly/bootstrap.css"
-        integrity="sha256-jN1/3LSOsvNEnOHn1sEOHXKA8RsU+Q7Wk7PE3dLe8Os=" crossorigin="anonymous">
-        <style>
-            h1 {
-              text-align: center;
-            }
-        </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/darkly/bootstrap.css"
+        integrity="sha256-sI9r5OJ+Pe8S/XYC/eO2EUp8TJRGG1TMDaPkJPlyFNo=" crossorigin="anonymous">
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-size: 18pt;
+            text-align: center;
+        }
+
+        h2 {
+            color: #FF0000;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
@@ -38,14 +49,31 @@
                     <a class="nav-link" href="index.html">Home
                         <span class="sr-only">(current)</span>
                     </a>
-                <li class="nav-item dropdown">
+                    </a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                         aria-expanded="false">Menù</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="FormazioneInter.html">Formazione squadra</a>
-                        <a class="dropdown-item" href="Orologio.html">Orologio</a>
-                        <a class="dropdown-item" href="Robot.html">Robot</a>
-                        <a class="dropdown-item" href="SoftSkills.html">Soft Skills</a>
+                        <p>Sistemi E Reti</p>
+                        <ul>
+                            <li><a class="dropdown-item" href="FormazioneInter.html">Squadra di calcio</a></li>
+                            <li><a class="dropdown-item" href="Orologio.html">Orologio</a></li>
+                            <li><a class="dropdown-item" href="Robot.html">Robot</a></li>
+                            <li><a class="dropdown-item" href="SoftSkills.html">Soft Skills</a></li>
+                        </ul>
+                        <p>Italiano</p>
+                        <ul>
+                            <li><a class="dropdown-item" href="index.html">Obiettivi agenda 2030</a></li>
+                        </ul>
+                        <p>Inglese</p>
+                        <ul>
+                            <li><a class="dropdown-item" href="index.html">The Imitation Game</a></li>
+                        </ul>
+                        <p>Matematica</p>
+                        <ul>
+                            <li><a class="dropdown-item" href="index.html">Statistica</a></li>
+                        </ul>
                     </div>
                 </li>
             </ul>
@@ -55,81 +83,111 @@
             </form>
         </div>
     </nav>
-    <h1>Soft Skills</h1>
-    <ul>
-        <li>
-            <strong>Problem solving</strong>: Sono capace di analizzare un problema e di trovare una soluzione.
-        </li>
-        <li>
-            <strong>Team working</strong>: Riesco a lavorare e a collaborare con un gruppo di persone.
-        </li>
-        <li>
-            <strong>Disponibilità</strong>: Sono una persona disponibile a qualsiasi orario per lavorare.
-        </li>
-        <li>
-            <strong>Leadership</strong>: Sono capace di saper guidare, motivare e trascinare i membri del team verso un
-            obiettivo.
-        </li>
-        <li>
-            <strong>Autonomia</strong>: Sono capace di svolgere i compiti assegnati da solo.
-        </li>
-        <li>
-            <strong>Comunicazione</strong>: Interagisco facilmente con le altre persone e so trasmettere le informazioni
-            in modo chiaro.
-        </li>
-        <li>
-            <strong>Lavorare sotto pressione</strong>: Riesco a consegnare le mansioni richieste entro o in anticipo
-            della data di scadenza della consegna e sono capace di controllare lo stress.
-        </li>
-        <li>
-            <strong>Pianificare e organizzare</strong>: So identificare obiettivi e priorità, tener conto del tempo a
-            disposizione e organizzare il lavoro delle eventuali risorse a disposizione.
-        </li>
-        <li>
-            <strong>Apprendere in maniera continuativa</strong>: Riesco ad apprendere facilmente nuovi argomenti e
-            risolvere delle lacune grazie a degli esempi e spiegazioni.
-        </li>
-        <li>
-            <strong>Gestire le informazioni</strong>: Riesco ad acquisire, organizzare e riformulare efficacemente dati
-            e conoscenze provenienti da fonti diverse, verso un obiettivo definito.
-        </li>
-        <li>
-            <strong>Fiducia in me stesso</strong>: Sono consapevole delle mie capacità e delle mie idee al di là delle
-            opinioni degli altri.
-        </li>
-        <li>
-            <strong>Intraprendenza</strong>: Sono capace di sviluppare idee e di saperle organizzare in un progetto fino
-            a realizzarlo.
-        </li>
-    </ul>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js"
-        integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
-    <script>
-        (function () {
-            'use strict';
+    <div class="navbar-expand-lg navbar-dark bg-primary container p-0 mt-3 mb-3 shadow rounded text-center">
+        <div>
+            <h1>Soft Skills</h1>
+            <p>
+                <img src="https://i.imgur.com/fc2Gz7q.png" alt="...">
+            </p>
+            <h2>Cosa sono?</h2>
+            <p>Le soft skills sono delle capacità relazionali e comportamentali, che caratterizzano la nostra persona e
+                indicano
+                il modo in cui ci poniamo rispetto il contesto lavorativo nel quale operiamo o vorremmo operare.
+                Le soft skill sono importantissime anche per potersi rapportare in modo ottimale con tutte le persone
+                che fanno
+                parte del proprio ecosistema lavorativo: colleghi, responsabili ed eventualmente clienti.</p>
+            <h2>Le mie soft skills:</h2>
+            <p>
+                <strong>
+                    <font color="#ff8c00">Problem solving
+                </strong></font>: Sono capace di analizzare un problema e di trovare una soluzione.
+            </p>
+            <p>
+                <font color="#ff0000"><strong>Team working</strong></font>: Riesco a lavorare e a collaborare con un
+                gruppo di
+                persone.
+            </p>
+            <p>
+                <font color="#ffff00"><strong>Disponibilità</strong></font>: Sono una persona disponibile a qualsiasi
+                orario per
+                lavorare.
+            </p>
+            <p>
+                <font color="#0000ff"><strong>Leadership</strong></font>: Sono capace di saper guidare, motivare e
+                trascinare i
+                membri del team verso un
+                obiettivo.
+            </p>
+            <p>
+                <font color="#008000"><strong>Autonomia</strong></font>: Sono capace di svolgere i compiti assegnati da
+                solo.
+            </p>
+            <p>
+                <font color="#ff00ff"><strong>Comunicazione</strong></font>: Interagisco facilmente con le altre persone
+                e so
+                trasmettere le informazioni
+                in modo chiaro.
+            </p>
+            <p>
+                <font color="#00ffff"><strong>Lavorare sotto pressione</strong></font>: Riesco a consegnare le mansioni
+                richieste entro o in anticipo
+                della data di scadenza della consegna e sono capace di controllare lo stress.
+            </p>
+            <p>
+                <font color="#00ffff"><strong>Pianificare e organizzare</strong></font>: So identificare obiettivi e
+                priorità,
+                tener conto del tempo a
+                disposizione e organizzare il lavoro delle eventuali risorse a disposizione.
+            <p>
+                <font color="#00ff00"><strong>Apprendere in maniera continuativa</strong></font>: Riesco ad apprendere
+                facilmente nuovi argomenti e
+                risolvere delle lacune grazie a degli esempi e spiegazioni.
+            <p>
+                <font color="#800080"><strong>Gestire le informazioni</strong></font>: Riesco ad acquisire, organizzare
+                e
+                riformulare efficacemente dati
+                e conoscenze provenienti da fonti diverse, verso un obiettivo definito.
+            <p>
+                <font color="#ffd700"><strong>Fiducia in me stesso</strong></font>: Sono consapevole delle mie capacità
+                e delle
+                mie idee al di là delle
+                opinioni degli altri.
+            <p>
+                <font color="#ff1493"><strong>Intraprendenza</strong></font>: Sono capace di sviluppare idee e di
+                saperle
+                organizzare in un progetto fino
+                a realizzarlo.
+            </p>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js"
+            integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
+        <script>
+            (function () {
+                'use strict';
 
-            $(window).scroll(function () {
-                var top = $(document).scrollTop();
-                if (top > 50) {
-                    $('#home > .navbar').removeClass('navbar-transparent');
-                } else {
-                    $('#home > .navbar').addClass('navbar-transparent');
-                }
-            })
+                $(window).scroll(function () {
+                    var top = $(document).scrollTop();
+                    if (top > 50) {
+                        $('#home > .navbar').removeClass('navbar-transparent');
+                    } else {
+                        $('#home > .navbar').addClass('navbar-transparent');
+                    }
+                })
 
-            $('a[href="#"]').click(function (event) {
-                event.preventDefault();
-            })
+                $('a[href="#"]').click(function (event) {
+                    event.preventDefault();
+                })
 
-            // $('.alert').alert()
-            // $('.carousel').carousel();
-            $('.bs-component [data-toggle="popover"]').popover();
-            $('.bs-component [data-toggle="tooltip"]').tooltip();
-            $('.bs-component [data-toggle="popover"]').popover();
-            // $('.bs-component .modal-dialog').modal();
-        })();
-    </script>
+                // $('.alert').alert()
+                // $('.carousel').carousel();
+                $('.bs-component [data-toggle="popover"]').popover();
+                $('.bs-component [data-toggle="tooltip"]').tooltip();
+                $('.bs-component [data-toggle="popover"]').popover();
+                // $('.bs-component .modal-dialog').modal();
+            })();
+        </script>
 </body>
+
 </html>
