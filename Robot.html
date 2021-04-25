@@ -2,48 +2,50 @@
 <html lang="it">
 
 <head>
-    <!-- Metadati pagina web -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Armando Fiorillo">
-    <meta name="description" content="Disegno di un robot comandato tramite mouse">
-    <title>Robot</title>
-    <!-- Metadati Open Graph -->
-    <meta property="og:title" content="Robot.js">
-    <meta property="og:description" content="Disegno di un robot comandato tramite mouse">
-    <!-- Metadati Twitter Card -->
-    <meta name="twitter:creator" content="Armando Fiorillo">
-    <meta property="twitter:description" content="Disegno di un robot comandato tramite mouse">
-    <meta property="twitter:title" content="Robot.js">
-    <!--Metadati di p5.js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
-    <!-- Metadati Bootswatch -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/darkly/bootstrap.css" integrity="sha256-sI9r5OJ+Pe8S/XYC/eO2EUp8TJRGG1TMDaPkJPlyFNo=" crossorigin="anonymous">
-    <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-          text-align: center;
-        }
-        canvas {
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }
+  <!-- Metadati pagina web -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Armando Fiorillo">
+  <meta name="description" content="Disegno di un robot comandato tramite mouse">
+  <title>Robot</title>
+  <!-- Metadati Open Graph -->
+  <meta property="og:title" content="Robot.js">
+  <meta property="og:description" content="Disegno di un robot comandato tramite mouse">
+  <!-- Metadati Twitter Card -->
+  <meta name="twitter:creator" content="Armando Fiorillo">
+  <meta property="twitter:description" content="Disegno di un robot comandato tramite mouse">
+  <meta property="twitter:title" content="Robot.js">
+  <!--Metadati di p5.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+  <!-- Metadati Bootswatch -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/darkly/bootstrap.css"
+    integrity="sha256-sI9r5OJ+Pe8S/XYC/eO2EUp8TJRGG1TMDaPkJPlyFNo=" crossorigin="anonymous">
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-        p {
-    font-size: 18pt;
-    text-align: center;
-  }
+    h1 {
+      text-align: center;
+    }
 
- 
-    </style>
+    canvas {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+
+    p {
+      font-size: 18pt;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
-     <!-- Navbar -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
@@ -90,79 +92,82 @@
       </form>
     </div>
   </nav>
-    <h1>Robot</h1>
-    <script>
-        function setup() {
-            createCanvas(800, 800);
+  <h1>Robot</h1>
+  <script>
+    function setup() {
+      createCanvas(800, 800);
+    }
+
+    function draw() {
+      background(220);
+      fill(153, 203, 255);
+      square(mouseX + 30, mouseY, 150, 15); //testa
+      fill(255, 254, 259);
+      triangle(mouseX + 105, mouseY + 65, mouseX + 65, mouseY + 85, mouseX + 140, mouseY + 85); //naso
+      fill(37, 40, 80);
+      rect(mouseX + 80, mouseY + 150, 50, 30); //collo
+      fill(255, 255, 0);
+      circle(mouseX + 60, mouseY + 50, 20); //occhio sinistro
+      circle(mouseX + 150, mouseY + 50, 20); //occhio destro
+      fill(210, 210, 210);
+      rect(mouseX + 40, mouseY - 60, 20, 60); //antenna sinistra
+      rect(mouseX + 150, mouseY - 60, 20, 60); //antenna destra
+      fill(37, 40, 80);
+      circle(mouseX + 160, mouseY - 70, 30); //cerchio sull'antenna destra
+      fill(37, 40, 80);
+      circle(mouseX + 50, mouseY - 70, 30); //cerchio sull'antenna sinistra
+      fill(153, 203, 255);
+      rect(mouseX + 25, mouseY + 180, 160, 210); //busto
+      fill(255, 255, 0);
+      rect(mouseX + 60, mouseY + 110, 90, 20, 15); //bocca 
+      fill(37, 40, 80);
+      arc(mouseX + 185, mouseY + 210, 50, 50, -HALF_PI, HALF_PI); //spalla destra
+      fill(37, 40, 80);
+      arc(mouseX + 25, mouseY + 210, 50, 50, HALF_PI, -HALF_PI); //spalla sinistra
+      fill(153, 203, 255);
+      rect(mouseX + 195, mouseY + 233, 20, 100); //braccio destro
+      fill(153, 203, 255);
+      rect(mouseX - 6, mouseY + 233, 20, 100); //braccio sinistro
+      rect(mouseX + 40, mouseY + 390, 35, 200); //gamba sinistra
+      rect(mouseX + 130, mouseY + 390, 35, 200); //gamba destra
+      fill(37, 40, 80);
+      rect(mouseX + 130, mouseY + 590, 60, 30); //piede destro
+      rect(mouseX + 15, mouseY + 590, 60, 30); //piede sinistro
+      fill(37, 40, 80);
+      circle(mouseX + 5, mouseY + 345, 35); //mano sinistra
+      fill(37, 40, 80);
+      circle(mouseX + 205, mouseY + 345, 35); //mano destra
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js"
+    integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      $(window).scroll(function () {
+        var top = $(document).scrollTop();
+        if (top > 50) {
+          $('#home > .navbar').removeClass('navbar-transparent');
+        } else {
+          $('#home > .navbar').addClass('navbar-transparent');
         }
+      })
 
-        function draw() {
-            background(220);
-            fill(153, 203, 255);
-            square(mouseX + 30, mouseY, 150, 15); //testa
-            fill(255, 254, 259);
-            triangle(mouseX + 105, mouseY + 65, mouseX + 65, mouseY + 85, mouseX + 140, mouseY + 85); //naso
-            fill(37, 40, 80);
-            rect(mouseX + 80, mouseY + 150, 50, 30); //collo
-            fill(255, 255, 0);
-            circle(mouseX + 60, mouseY + 50, 20); //occhio sinistro
-            circle(mouseX + 150, mouseY + 50, 20); //occhio destro
-            fill(210, 210, 210);
-            rect(mouseX + 40, mouseY - 60, 20, 60); //antenna sinistra
-            rect(mouseX + 150, mouseY - 60, 20, 60); //antenna destra
-            fill(37, 40, 80);
-            circle(mouseX + 160, mouseY - 70, 30); //cerchio sull'antenna destra
-            fill(37, 40, 80);
-            circle(mouseX + 50, mouseY - 70, 30); //cerchio sull'antenna sinistra
-            fill(153, 203, 255);
-            rect(mouseX + 25, mouseY + 180, 160, 210); //busto
-            fill(255, 255, 0);
-            rect(mouseX + 60, mouseY + 110, 90, 20, 15); //bocca 
-            fill(37, 40, 80);
-            arc(mouseX + 185, mouseY + 210, 50, 50, -HALF_PI, HALF_PI); //spalla destra
-            fill(37, 40, 80);
-            arc(mouseX + 25, mouseY + 210, 50, 50, HALF_PI, -HALF_PI); //spalla sinistra
-            fill(153, 203, 255);
-            rect(mouseX + 195, mouseY + 233, 20, 100); //braccio destro
-            fill(153, 203, 255);
-            rect(mouseX - 6, mouseY + 233, 20, 100); //braccio sinistro
-            rect(mouseX + 40, mouseY + 390, 35, 200); //gamba sinistra
-            rect(mouseX + 130, mouseY + 390, 35, 200); //gamba destra
-            fill(37, 40, 80);
-            rect(mouseX + 130, mouseY + 590, 60, 30); //piede destro
-            rect(mouseX + 15, mouseY + 590, 60, 30); //piede sinistro
-            fill(37, 40, 80);
-            circle(mouseX + 5, mouseY + 345, 35); //mano sinistra
-            fill(37, 40, 80);
-            circle(mouseX + 205, mouseY + 345, 35); //mano destra
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js" integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
-    <script>
-        (function () {
-            'use strict';
+      $('a[href="#"]').click(function (event) {
+        event.preventDefault();
+      })
 
-            $(window).scroll(function () {
-                var top = $(document).scrollTop();
-                if (top > 50) {
-                    $('#home > .navbar').removeClass('navbar-transparent');
-                } else {
-                    $('#home > .navbar').addClass('navbar-transparent');
-                }
-            })
-
-            $('a[href="#"]').click(function (event) {
-                event.preventDefault();
-            })
-
-            // $('.alert').alert()
-            // $('.carousel').carousel();
-            $('.bs-component [data-toggle="popover"]').popover();
-            $('.bs-component [data-toggle="tooltip"]').tooltip();
-            $('.bs-component [data-toggle="popover"]').popover();
-            // $('.bs-component .modal-dialog').modal();
-        })();
-    </script>
+      // $('.alert').alert()
+      // $('.carousel').carousel();
+      $('.bs-component [data-toggle="popover"]').popover();
+      $('.bs-component [data-toggle="tooltip"]').tooltip();
+      $('.bs-component [data-toggle="popover"]').popover();
+      // $('.bs-component .modal-dialog').modal();
+    })();
+  </script>
 </body>
+
 </html>
