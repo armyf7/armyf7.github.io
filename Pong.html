@@ -116,7 +116,7 @@
   <h2>Descrizione del gioco:</h2>
   <p>Il pong è un gioco 2D che simula in modo molto semplificato il tennistavolo. <br>Il giocatore controlla con il
     mouse una racchetta e colpisce una pallina che rimbalza sui bordi dello schermo, ogni volta che viene colpita, si
-    ottiene un punto. Il punteggio viene visualizzato su un contatore.</p>
+    ottiene un punto. <br>Il punteggio viene visualizzato su un contatore.</p>
   <script>
     // Creo un nuovo tipo "Colore"
     class Colore {
@@ -164,16 +164,10 @@
     let coloreRosso = new Colore(255, 0, 0);
     let coloreVerde = new Colore(0, 255, 0);
     let coloreBlu = new Colore(0, 0, 255);
-    let p1 = new Pallina(50, 50, 50, coloreRosso);
-    let p2 = new Pallina(120, 200, 80, coloreVerde);
-    let p3 = new Pallina(250, 100, 60, coloreBlu);
+    let p1 = new Pallina(50,50,50, coloreRosso);
     let rac = new Racchetta(5, 30, 20, 80, coloreVerde);
     let velocitaxp1 = 5; // Velocità della prima pallina sull'asse x
     let velocitayp1 = 5; // Velocità della prima pallina sull'asse y
-    let velocitaxp2 = 4; // Velocità della seconda pallina sull'asse x
-    let velocitayp2 = 4; // Velocità della seconda pallina sull'asse y
-    let velocitaxp3 = 6; // Velocità della terza pallina sull'asse x
-    let velocitayp3 = 6; // Velocità della terza pallina sull'asse y
     let punti = 0; // Punteggio iniziale
 
     function setup() {
@@ -193,13 +187,6 @@
       fill(p1.colore.rosso, p1.colore.verde, p1.colore.blue);
       circle(p1.x, p1.y, p1.diametro);
 
-      // Seconda pallina
-      fill(p2.colore.rosso, p2.colore.verde, p2.colore.blue);
-      circle(p2.x, p2.y, p2.diametro);
-
-      // Terza Pallina
-      fill(p3.colore.rosso, p3.colore.verde, p3.colore.blue);
-      circle(p3.x, p3.y, p3.diametro);
 
       // Condizioni della prima pallina
 
@@ -221,48 +208,6 @@
 
       p1.x = p1.x + velocitaxp1;
       p1.y = p1.y + velocitayp1;
-
-      // Condizioni della seconda pallina
-
-      // Impediamo che la pallina superi il bordo in alto e il bordo in basso, la velocità passa da positiva a negativa sull'asse x
-      if (p2.x + velocitaxp2 > width - 50 || p2.x + velocitayp2 < 50) {
-        velocitaxp2 = -velocitaxp2;
-      }
-
-      // Impediamo che la pallina superi il bordo in alto e il bordo in basso, la velocità passa da positiva a negativa sull'asse y
-      if (p2.y + velocitayp2 > height - 50 || p2.y + velocitayp2 < 50) {
-        velocitayp2 = -velocitayp2;
-      }
-
-      // Creiamo il rimbalzo della pallina, quando la racchetta la colpisce, si ottiene un punto
-      if ((p2.y >= mouseY && p2.y <= mouseY + 80 && p2.x <= 80)) {
-        velocitaxp2 = 5;
-        punti = punti + 1;
-      }
-
-      p2.x = p2.x + velocitaxp2;
-      p2.y = p2.y + velocitayp2;
-
-      // Condizioni della terza pallina
-
-      // Impediamo che la pallina superi il bordo in alto e il bordo in basso, la velocità passa da positiva a negativa sull'asse y
-      if (p3.x + velocitaxp3 > width - 60 || p3.x + velocitayp3 < 60) {
-        velocitaxp3 = -velocitaxp3;
-      }
-
-      // Impediamo che la pallina superi il bordo in alto e il bordo in basso, la velocità passa da positiva a negativa sull'asse y
-      if (p3.y + velocitayp3 > height - 60 || p3.y + velocitayp3 < 60) {
-        velocitayp3 = -velocitayp3;
-      }
-
-      // Creiamo il rimbalzo della pallina, quando la racchetta la colpisce, si ottiene un punto
-      if ((p3.y >= mouseY && p3.y <= mouseY + 80 && p3.x <= 60)) {
-        velocitaxp3 = 5;
-        punti = punti + 1;
-      }
-
-      p3.x = p3.x + velocitaxp3;
-      p3.y = p3.y + velocitayp3;
 
       // Questa condizione impedisce alla racchetta di superare il bordo in alto
       if (mouseY <= 0) {
