@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <!-- Metadati della pagina web -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Armando Fiorillo">
+  <meta name="description" content="Pagina web sulle funzioni">
+  <title>Funzioni</title><!-- Metadati Open Graph -->
+  <meta property="og:title" content="Funzioni">
+  <meta property="og:description" content="Pagina web sulle funzioni"><!-- Metadati Twitter Card -->
+  <meta name="twitter:creator" content="Armando Fiorillo">
+  <meta property="twitter:description" content="Pagina web sulle funzioni">
+  <meta property="twitter:title" content="Funzioni"><!-- Metadati Bootswatch -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/darkly/bootstrap.css"
+    integrity="sha256-sI9r5OJ+Pe8S/XYC/eO2EUp8TJRGG1TMDaPkJPlyFNo=" crossorigin="anonymous">
+  <style>
+    p {
+      font-size: 18pt;
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff0000;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00ff00;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav style="border-style:solid; border-color: WHITE" class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+      aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+            aria-expanded="false">Menù</a>
+          <div style="border-style:solid; border-color: WHITE" class="dropdown-menu text-center">
+            <p>Sistemi e Reti</p>
+            <ul>
+              <li>
+                <a class="dropdown-item" href="FormazioneInter.html">Squadra di calcio</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="Orologio.html">Orologio</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="Robot.html">Robot</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="SoftSkills.html">Soft Skills</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="Pong.html">Videogame Pong</a>
+              </li>
+            </ul>
+            <p>Italiano</p>
+            <ul>
+              <li>
+                <a class="dropdown-item" href="agenda2030.html">Agenda 2030</a>
+              </li>
+            </ul>
+            <p>Inglese</p>
+            <ul>
+              <li>
+                <a class="dropdown-item" href="theimitationgame.html">The Imitation Game</a>
+              </li>
+            </ul>
+            <p>Matematica</p>
+            <ul>
+              <li>
+                <a class="dropdown-item" href="stastica.html">Statistica</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="funzioni">Funzioni</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Cerca"> <button
+          class="btn btn-secondary my-2 my-sm-0" type="submit">Cerca</button>
+      </form>
+    </div>
+  </nav>
+  <h1>Funzioni</h1>
+  <h2>Cosa si intende per funzione?</h2>
+  <p>La funzione matematica è una relazione tra due insiemi, A e B, chiamati anche dominio e codominio, che associa a
+    ogni elemento del dominio A, uno e un solo elemento del codominio B.<br>
+    Poiché una funzione fa corrispondere a ogni elemento di A un unico elemento di B, essa viene anche chiamata
+    corrispondenza univoca.<br>
+    Per indicare una funzione si usa una lettera minuscola (spesso la lettera f). nel
+    seguente modo:
+    f: A -> B, che si legge: «f è una funzione da A a B».<br>
+    Si dice che A è l’insieme di partenza della funzione e B l’insieme di arrivo.<br>
+    Si può utilizzare una notazione simile anche per indicare che a un elemento x di A
+    corrisponde un elemento y di B:
+    f: x -> y; y è detta l’immagine di x mediante la funzione f.</p>
+  <p><img src="https://www.youmath.it/images/stories/FunzioniInGenerale/esempio-di-funzione-1.png" alt="..."
+      width="1000" height="540"></p>
+  <p>
+    L’insieme di partenza A è detto dominio
+    della funzione; il sottoinsieme di B
+    formato dalle immagini degli elementi
+    di A è detto codominio. Indichiamo
+    il codominio con la lettera C.
+  </p>>
+  <p><img src="https://i.imgur.com/OFhHOqg.png" alt="..."></p>
+  <h2>Immagine e controimmagine di una funzione</h2>
+  <p>L'immagine di una funzione è l'insieme dei valori assunti dalla funzione nel suo dominio.<br>Quindi è contenuta
+    nell'insieme di arrivo della funzione, che è il suo codominio. L'immagine può coincidere con il dominio.<br>
+    L'insieme delle controimmagini è il dominio della relazione stessa.</p>
+  <h2>Funzione iniettiva</h2>
+  <p>Una funzione da A a B si dice iniettiva se ogni elemento di B è immagine di al più un elemento di A.<br>
+    Se una funzione è iniettiva, a due elementi distinti del dominio non corrisponde
+    mai lo stesso elemento del codominio, cioè:
+    x1 ≠ x2 ⇒ f(x1) ≠ f(x2).
+  </p>
+  <p><img src="https://i.imgur.com/IFcVmwp.png" alt="..."></p>
+  <h2>Funzione suriettiva</h2>
+  <p>Una funzione da A a B si dice
+    suriettiva quando ogni elemento
+    di B è immagine di almeno un elemento
+    di A.<br>
+    Il fatto che una funzione sia o non sia suriettiva dipende da come si sceglie l’insieme
+    di arrivo. Se lo si sceglie coincidente con il codominio, la funzione è certamente
+    suriettiva.</p>
+  <p><img src="https://i.imgur.com/QhOnhQZ.png" alt="..."></p>
+  <h2>Funzione biiettiva</h2>
+  <p>Una funzione da A a B è biiettiva
+    quando è sia iniettiva sia suriettiva.
+    Una funzione biiettiva viene anche chiamata biiezione o corrispondenza biunivoca
+    fra A e B. In simboli: f: A ↔ B.<br>
+    In una funzione biiettiva c’è una corrispondenza «uno a uno» fra gli elementi di
+    A e quelli di B. Ogni elemento di A è l’immagine di uno e un solo elemento di B
+    e viceversa.</p>
+  <p><img src="https://i.imgur.com/QhOnhQZ.png" alt="..."></p>
+  <h2>Funzione pari</h2>
+  <p>Una funzione è pari per cui f(-x)=f(x), e che quindi assume valori simmetrici rispetto all'asse delle ordinate.</p>
+  <p><img src="https://www.youmath.it/images/stories/le-funzioni/quartica-funzione-pari.png" alt="..."></p>
+  <h2>Funzione dispari</h2>
+  <p>La funzione è dispari per cui f(-x)=-f(-x) e quindi assume valori simmetrici rispetto all'origine.</p>
+  <p><img src="https://www.youmath.it/images/stories/le-funzioni/polinomio-con-potenze-dispari-funzione-dispari.png"
+      alt="..."></p>
+  <h2>Funzione composta</h2>
+  <p>La funzione composta è formata da da una o più funzioni semplicemente applicando prima funzione e poi l'altra.<br>
+    Ad esempio, componiamo le funzioni: f(x) = x+1 e g(x) = x²:
+    1) Partiamo da x e applichiamo la f: x -> x+1;
+    2) Ora applichiamo la g: x+1 -> (x+1)².<br>
+    Abbiamo la nuova funzione composta h(x) = g(f(x)) = (x+1)².
+    Possiamo scrivere h = g ∘ f: prima applichiamo la f e poi la g.
+    Attenzione! L'ordine è importante. Infatti in generale g ∘ f ≠ f ∘ g.
+  </p>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js"
+    integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
+  <script>
+
+
+
+
+    (function () {
+      'use strict';
+
+      $(window).scroll(function () {
+        var top = $(document).scrollTop();
+        if (top > 50) {
+          $('#home > .navbar').removeClass('navbar-transparent');
+        } else {
+          $('#home > .navbar').addClass('navbar-transparent');
+        }
+      })
+
+      $('a[href="#"]').click(function (event) {
+        event.preventDefault();
+      })
+
+      // $('.alert').alert()
+      // $('.carousel').carousel();
+      $('.bs-component [data-toggle="popover"]').popover();
+      $('.bs-component [data-toggle="tooltip"]').tooltip();
+      $('.bs-component [data-toggle="popover"]').popover();
+      // $('.bs-component .modal-dialog').modal();
+    })();
+  </script>
+</body>
+
+</html>
